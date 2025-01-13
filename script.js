@@ -1,4 +1,4 @@
-// script.js
+
 function adjustPageWidth() {
     const width = window.innerWidth;
     const container = document.querySelector('.container');
@@ -21,11 +21,10 @@ function adjustPageWidth() {
     }
   }
   
-  // Adjust page width on load and resize
+  
   window.addEventListener('load', adjustPageWidth);
   window.addEventListener('resize', adjustPageWidth);
   
-  // Toggle the left menu
   document.getElementById('toggleMenu').addEventListener('click', () => {
     const leftMenu = document.querySelector('.left-menu');
     leftMenu.classList.toggle('collapsed');
