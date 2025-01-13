@@ -1,0 +1,128 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Full height for flex container */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4CAF50; /* Green for navbar */
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Main container */
+.container {
+  flex: 1; /* Fills the remaining height between navbar and footer */
+  display: flex;
+  margin-top: 70px; /* Offset for fixed navbar */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Left Menu */
+.left-menu {
+  width: 20%;
+  background-color: #f7f7f7; /* Light gray */
+  padding: 20px;
+  transition: width 0.3s;
+  border-right: 2px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-menu.collapsed {
+  width: 5%;
+  overflow: hidden;
+}
+
+.left-menu button {
+  background-color: #ff6f61; /* Coral red */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.left-menu button:hover {
+  background-color: #e65b4e;
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+  width: 60%;
+  padding: 20px;
+  background-color: #fff; /* White content area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+/* Right Panel */
+.right-panel {
+  width: 20%;
+  padding: 20px;
+  background-color: #f0f8ff; /* Alice blue */
+  border-left: 2px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #4CAF50; /* Green to match navbar */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+/* List and Miscellaneous Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-menu,
+  .right-panel {
+    width: 100%;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
